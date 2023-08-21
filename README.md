@@ -104,7 +104,7 @@ Using the gcc compiler, we compiled the program to get the output.
 `gcc sumton.c`
 `.\a.out`
 
-![image](https://github.com/RohithNagesh/pes_asic_class/assets/103078929/838fe23f-5655-4724-af96-ab8ae13f084d)
+![image]()
 
 
 ## RISCV GCC Compiler and Dissemble
@@ -119,23 +119,23 @@ In order to view the main section, type `/main`.
 
 Here, since we used `-O1` optimisation, the number of instructions are 14.
 
-![image](https://github.com/RohithNagesh/pes_asic_class/assets/103078929/827b74dd-879d-4720-8a4a-5ba09e28abc3)
+![image]()
 
 When we use `-Ofast` optimisation, we can see that the number of instructions have been 11
 
-![image](https://github.com/RohithNagesh/pes_asic_class/assets/103078929/f8489527-7c38-49b1-994a-dcb895a0e3c8)
+![image]()
 
 ## Spike Simulation and Debug
 
 `spike pk sum1ton.o` is used to check whether the instructions produced are right to give the correct output.
 
-![image](https://github.com/RohithNagesh/pes_asic_class/assets/103078929/91cefa96-d8ff-470d-a463-93c8622c321a)
+![image]()
 
 `spike -d pk sum1ton.c` is used for debugging.
 
 The contents of the registers can also be viewed.
 
-![image](https://github.com/RohithNagesh/pes_asic_class/assets/103078929/a769813b-a924-4ea7-8578-e99bbfdf221b)
+![image]()
 
 # Integer Number Representation 
 
@@ -162,7 +162,7 @@ int main(){
 	return 0;
 }
 ```
-![image](https://github.com/RohithNagesh/pes_asic_class/assets/103078929/26b09651-3729-48bb-adc5-405fbbb7c5dc)
+![image]()
 
 **Signed 64-bit Number**
 ``` c
@@ -177,7 +177,7 @@ int main(){
 	return 0;
 }
 ```
-![image](https://github.com/RohithNagesh/pes_asic_class/assets/103078929/538fd46d-94df-41e9-aa18-83a0a5ba6526)
+![image]()
 
 # Application Binary Interface
 ## Introduction to ABI
@@ -192,11 +192,11 @@ In big-endian representation, you store the most significant byte (MSB) at the l
 #### For example, consider the 64-bit hexadecimal value 0x0123456789ABCDEF. 
 In Little-Endian representation, it would be stored as follows in memory:
 
-![image](https://github.com/RohithNagesh/pes_asic_class/assets/103078929/307fabf6-7f58-4337-8171-6d62d99a4386)
+![image]()
 
 In Big-Endian representation, it would be stored as follows in memory:
 
-![image](https://github.com/RohithNagesh/pes_asic_class/assets/103078929/aa53e082-5878-4e3f-948a-f6f080ed0ed2)
+![image]()
 ## Load, Add and Store Instructions
 Load, Add, and Store instructions are fundamental operations in computer architecture and assembly programming. They are often used to manipulate data within a computer's memory and registers.
 1. **Load Instructions:**
@@ -231,13 +231,13 @@ The choice of the number of registers in a processor's architecture, such as the
 #### ABI Names
 ABI names for registers serve as a standardized way to designate the purpose and usage of specific registers within a software ecosystem. These names play a critical role in maintaining compatibility, optimizing code generation, and facilitating communication between different software components. 
 
-![image](https://github.com/RohithNagesh/pes_asic_class/assets/103078929/b735fc44-0c08-40e8-8303-c338647dbd9f)
+![image]()
 # Labwork using ABI Function Calls
 ## Algorithm for C Program using ASM
 - Incorporating assembly language code into a C program can be done using inline assembly or by linking separate assembly files with your C code.
 - When you call an assembly function from your C code, the C calling convention is followed, including pushing arguments onto the stack or passing them in registers as required.
 - The program executes the assembly function, following the assembly instructions you've provided.
-![image](https://github.com/RohithNagesh/pes_asic_class/assets/103078929/1d76b7ef-cac9-4331-9190-31af36525e0c)
+![image]()
 ## Review ASM Function Calls
 - You write your C code in one file and your assembly code in a separate file.
 - In the assembly file, you declare assembly functions with appropriate signatures that match the calling conventions of your platform.
@@ -283,7 +283,7 @@ ret
 
 **Execution:** To execute the object file run the command `spike pk custom1to9.o`
 
-![image](https://github.com/RohithNagesh/pes_asic_class/assets/103078929/ddb45c8c-11cc-4d49-b31d-c922698e6301)
+![image]()
 ## Lab to Run C-Program on RISCV-CPU
 
 `git clone https://github.com/kunalg123/riscv_workshop_collaterals.git`
@@ -300,4 +300,4 @@ ret
 
 `./rv32im.sh`
 
-![image](https://github.com/RohithNagesh/pes_asic_class/assets/103078929/3b8e5a8d-8f66-4621-ae35-3123f8e4f3f0)
+![image]()
