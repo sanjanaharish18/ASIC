@@ -111,7 +111,7 @@ Using the gcc compiler, we compiled the program to get the output.
 
 Using the riscv gcc compiler `riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o sumton.o sumton.c`, we compiled the C program.
 
-![image](https://github.com/RohithNagesh/pes_asic_class/assets/103078929/ecee943b-5723-463e-907f-fed2d45e2c41)
+![image]()
 
 To get the assembly code for the C program, `riscv64-unknown-elf-objdump -d sumton.o | less` .
 
