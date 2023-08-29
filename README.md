@@ -49,7 +49,7 @@ gcc sum1ton.c
 
 The following result was obtained:
 
-![image](https://github.com/shreyakotagal/pes_asic_class/assets/117657204/1d1ffe1c-22e4-441b-bb2d-f98698f689e0)
+![image](https://github.com/sanjanaharish18/ASIC/blob/main/Screenshot%20from%202023-08-29%2014-12-25.png)
 
  </details>
 <details>
@@ -58,7 +58,7 @@ The following result was obtained:
 ``` riscv64-unknown-elf-gcc -O1 -march=rv64i -mabi=lp64 -o sum1ton.o sum1ton.c ``` command was used to compile using riscv compiler.
 Initially it threw an error 
 
-![image](https://github.com/shreyakotagal/pes_asic_class/assets/117657204/8204a6ed-0a10-4cde-a0cb-b56b558149c5)
+![image](https://github.com/sanjanaharish18/ASIC/blob/main/Screenshot%20from%202023-08-29%2014-49-00.png?raw=true)
 
 Adding the following commands and restarting terminal solved the error
 
@@ -67,7 +67,7 @@ export PATH=~/riscv_toolchain/riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-lin
 export PATH=~/riscv_toolchain/riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linux-ubuntu14/riscv64-unknown-elf/bin:$PATH
 ```
 
-![image](https://github.com/shreyakotagal/pes_asic_class/assets/117657204/327682ff-ca97-4095-923d-4241aa61ad32)
+![image](https://github.com/sanjanaharish18/ASIC/blob/main/Screenshot%20from%202023-08-29%2014-49-00.png?raw=true)
 
 ```-O<number>``` : level of optimisation required
 
@@ -89,7 +89,7 @@ Here, since we used -O1 optimisation, the number of instructions are 15.
 
 When we use -Ofast optimisation, we can see that the number of instructions have been reduced to 12.
 
-![image](https://github.com/shreyakotagal/pes_asic_class/assets/117657204/0384dd9c-f7dd-44d2-8c55-26f77a3fc4f1)
+![image](https://github.com/shreyakotagal/pes_asic_class/assets/117657204/0384dd9c-f7dd-44d2-8c55-26f77a3fc4f)
 </details>
 
 <details>
@@ -97,7 +97,7 @@ When we use -Ofast optimisation, we can see that the number of instructions have
 
 ```spike -d pk sum1ton.o```
 
-![image](https://github.com/shreyakotagal/pes_asic_class/assets/117657204/b9d34030-fbe1-4648-b6c4-5abfd5d51395)
+![image](https://github.com/sanjanaharish18/ASIC/blob/main/Screenshot%20from%202023-08-29%2015-09-20.png)
 	
 </details>
 
@@ -141,7 +141,7 @@ int main()
 
 ```
 
-![image](https://github.com/shreyakotagal/pes_asic_class/assets/117657204/5c85970f-cd82-41c2-b819-2a3e9339f252)
+![image](https://github.com/sanjanaharish18/ASIC/blob/main/Screenshot%20from%202023-08-29%2015-20-00.png)
 
 **Signed 64-bit Number**
 
@@ -159,7 +159,7 @@ int main()
 }
 ```
 
-![image](https://github.com/shreyakotagal/pes_asic_class/assets/117657204/eeaef59e-239f-4c23-a654-bef97e5127d8)
+![image](https://github.com/sanjanaharish18/ASIC/blob/main/Screenshot%20from%202023-08-29%2015-21-32.png)
 
 </details> 
 </details>
@@ -291,5 +291,4 @@ blt a3, a2, loop
 add a0, a4, zero
 ret;
 ```
-![image](https://github.com/shreyakotagal/pes_asic_class/assets/117657204/ff565dcb-9b6f-4c01-8fc3-32ecdcde4146)
-</details>
+![image](https://github.com/sanjanaharish18/ASIC/blob/main/Screenshot%20from%202023-08-29%2015-27-29.png)
