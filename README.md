@@ -323,13 +323,13 @@ How simulator works
 <summary> Labs using iverilog and gtkwave </summary>
 using the command  ' git clone ' which cloned library files like standard cell library, primitives which are used for synthesis and few verilog codes for practice.
 
-![image](https://github.com/shreyakotagal/pes_asic_class/assets/117657204/ec4a32ce-2dfd-4ca7-a98c-8daf41299d15)
+![image](https://github.com/sanjanaharish18/ASIC/blob/main/Screenshot%20from%202023-09-07%2008-55-47.png)
 
 exploring the verilog_files file,
 
-![image](https://github.com/shreyakotagal/pes_asic_class/assets/117657204/af13a337-2c14-4c8a-905e-44e2426157a7)
+![image](https://github.com/sanjanaharish18/ASIC/blob/main/Screenshot%20from%202023-09-07%2009-44-00.png)
 
-![image](https://github.com/shreyakotagal/pes_asic_class/assets/117657204/a3d0869a-c4b8-4d91-94c5-41dc7a718caa)
+![image](https://github.com/sanjanaharish18/ASIC/blob/main/Screenshot%20from%202023-09-07%2009-51-32.png)
 
 ![image](https://github.com/shreyakotagal/pes_asic_class/assets/117657204/b3155472-7553-4123-b951-a9831ffa5c3e)
 
@@ -405,11 +405,11 @@ Tclk formula:
 * Synthesis: ``` synth -top good_mux ```
 * Generate netlist: ``` abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib ```
 
-![image](https://github.com/shreyakotagal/pes_asic_class/assets/117657204/fb50cbf8-8e9b-4187-8696-de79c88441d7)
+![image](https://github.com/sanjanaharish18/ASIC/blob/main/Screenshot%20from%202023-09-07%2009-54-54.png)
 
-![image](https://github.com/shreyakotagal/pes_asic_class/assets/117657204/f15b751f-58ce-4c63-a86e-6b67c45a052f)
+![image](https://github.com/sanjanaharish18/ASIC/blob/main/Screenshot%20from%202023-09-07%2009-55-16.png)
 
-![image](https://github.com/shreyakotagal/pes_asic_class/assets/117657204/bb13875c-5e10-4fc5-9e04-6b83a00c58db)
+![image](https://github.com/sanjanaharish18/ASIC/blob/main/Screenshot%20from%202023-09-07%2009-55-50.png)
 
 * Logic realized: ``` show ```
   
@@ -417,6 +417,6 @@ Tclk formula:
 
 *  netlist: ``` write_verilog -noattr good_mux_netlist.v```  ``` !gvim good_mux_netlist.v ```
 
-![image](https://github.com/shreyakotagal/pes_asic_class/assets/117657204/12cf0b32-eb8a-4514-8d74-c35103def5e8)
+![image](https://github.com/sanjanaharish18/ASIC/blob/main/Screenshot%20from%202023-09-07%2009-59-36.png)
 
 </details>
