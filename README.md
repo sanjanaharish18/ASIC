@@ -420,3 +420,9 @@ Tclk formula:
 ![image](https://github.com/sanjanaharish18/ASIC/blob/main/Screenshot%20from%202023-09-07%2009-59-36.png)
 
 </details>
+
+# DAY 4
+
+**Timing libs, hierarchical vs flat synthesis and efficient flop coding styles**
+
+<details>
