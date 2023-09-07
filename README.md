@@ -293,6 +293,8 @@ ret;
 ```
 ![image](https://github.com/sanjanaharish18/ASIC/blob/main/Screenshot%20from%202023-08-29%2015-27-29.png)
 
+</details>
+
 # Day 3
 ## Introduction to Verilog RTL Design and synthesis
 	
