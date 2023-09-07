@@ -292,3 +292,131 @@ add a0, a4, zero
 ret;
 ```
 ![image](https://github.com/sanjanaharish18/ASIC/blob/main/Screenshot%20from%202023-08-29%2015-27-29.png)
+
+# Day 3
+## Introduction to Verilog RTL Design and synthesis
+	
+<details> 
+<summary> Introduction to open-source simulator iverilog </summary>
+	
+Simulator
+• RTL design is checked for adherence to the spec by simulating the design
+• Simulator is the tool used for simulating the design
+	• iverilog is the tool used for this course
+Design
+• Design is the actual Verilog code or set of Verilog codes which has the intended functionality to meet with the required specifications
+TestBench
+• TestBench is the setup to apply stimulus (test_vectors) to the design to check its functionality
+How simulator works
+• Simulator looks for the changes on the input signals
+• Upon change to the input the output is evaluated
+• If no change to the input, no change to the output
+• Simulator is looking for change in the values of input
+	
+![image](https://github.com/shreyakotagal/pes_asic_class/assets/117657204/90f17c32-d553-4df6-b945-ce28f062b14d)
+	
+![image](https://github.com/shreyakotagal/pes_asic_class/assets/117657204/e401958a-daae-4611-9328-0d2a0cf6249f)
+
+</details>
+
+<details>
+<summary> Labs using iverilog and gtkwave </summary>
+using the command  ' git clone ' which cloned library files like standard cell library, primitives which are used for synthesis and few verilog codes for practice.
+
+![image](https://github.com/shreyakotagal/pes_asic_class/assets/117657204/ec4a32ce-2dfd-4ca7-a98c-8daf41299d15)
+
+exploring the verilog_files file,
+
+![image](https://github.com/shreyakotagal/pes_asic_class/assets/117657204/af13a337-2c14-4c8a-905e-44e2426157a7)
+
+![image](https://github.com/shreyakotagal/pes_asic_class/assets/117657204/a3d0869a-c4b8-4d91-94c5-41dc7a718caa)
+
+![image](https://github.com/shreyakotagal/pes_asic_class/assets/117657204/b3155472-7553-4123-b951-a9831ffa5c3e)
+
+
+</details>
+
+<details>
+<summary> Introduction to Yosys and Logic synthesis </summary>
+	
+Synthesizer
+
+• It is a tool used for converting RTL design code to netlist.
+
+• Here, the synthesizer used is Yosys.
+
+Yosys
+
+• It is an open-source framework for Verilog RTL synthesis and formal verification.
+
+• Yosys provides a collection of tools and algorithms that enable designers to transform high-level RTL (Register Transfer Level) descriptions of digital circuits into optimized gate-level representations suitable for physical implementation on hardware.
+
+![image](https://github.com/shreyakotagal/pes_asic_class/assets/117657204/40e59198-1f35-43ea-b171-d7c4d8be52f9)
+
+
+• Design and .lib files are fed to the synthesizer to get a netlist file.
+
+• Netlist is the representation of the design in the form of standard cells in the .lib
+
+Commands used to perform different opertions:
+
+* read_verilog to read the design
+* read_liberty to read the .lib file
+* write_verilog to write out the netlist file
+To verify the synthesis
+
+![image](https://github.com/shreyakotagal/pes_asic_class/assets/117657204/623017a3-c5d8-4441-889c-c5bc25e8e6b5)
+
+* Netlist along with the tesbench is fed to the iverilog simulator.
+* The vcd file generated is fed to the gtkwave simulator.
+* The output on the simulator must be same as the output observed during RTL simulation.
+* Same RTL testbench can be used as the primary inputs and primary outputs remain same between the RTL design and synthesised netlist.
+
+Logic Synthesis
+
+* Logic synthesis is a process in digital design that transforms a high-level hardware description of a digital circuit, typically in a hardware description language (HDL) like Verilog or VHDL, into a lower-level representation composed of logic gates and flip-flops.
+* The goal of logic synthesis is to optimize the design for various criteria such as performance, area, power consumption, and timing.
+
+.lib
+
+* It is a collection of logical modules like And, Or, Not etc.
+* It has different flavors of same gate like 2 input AND gate, 3 input AND gate etc with different performace speed.
+
+Why fast and slow version of same gate?
+* Fast and slow versions of gates are essential in digital circuit design to balance between clock frequency and timing constraints.
+* Fast gates have shorter propagation delays and are used to reduce setup and hold time violations, allowing for higher clock frequencies.
+* Slow gates, with longer delays, can be used to intentionally slow down critical paths or address timing issues.
+* The Tclk formula helps calculate the maximum clock frequency while considering these factors.
+
+Tclk formula: 
+![image](https://github.com/shreyakotagal/pes_asic_class/assets/117657204/99c06308-bea9-4d7b-94b2-f54527ec0acf)
+
+* t_setup: The setup time is the minimum time before the clock edge when the input data must be stable.
+* t_hold: The hold time is the minimum time after the clock edge during which the input data must remain stable.
+* t_propagation: This term represents the propagation delay of the logic gates in the critical path.
+* Tcq: This term represents the clock-to-q delay of the flip-flops or registers used in the design. It's often a fixed value based on the chosen flip-flop technology.
+</details>
+<details> 
+<summary> Labs using Yosys and Sky130 PDKs </summary>
+
+* Open verilog_files and invoke yosys 
+* Read library: ```  read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib  ```
+* Read design: ``` read_verilog good_mux.v ```
+* Synthesis: ``` synth -top good_mux ```
+* Generate netlist: ``` abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib ```
+
+![image](https://github.com/shreyakotagal/pes_asic_class/assets/117657204/fb50cbf8-8e9b-4187-8696-de79c88441d7)
+
+![image](https://github.com/shreyakotagal/pes_asic_class/assets/117657204/f15b751f-58ce-4c63-a86e-6b67c45a052f)
+
+![image](https://github.com/shreyakotagal/pes_asic_class/assets/117657204/bb13875c-5e10-4fc5-9e04-6b83a00c58db)
+
+* Logic realized: ``` show ```
+  
+![image](https://github.com/shreyakotagal/pes_asic_class/assets/117657204/f938ff9c-974b-4963-8893-de4aec79bad2)
+
+*  netlist: ``` write_verilog -noattr good_mux_netlist.v```  ``` !gvim good_mux_netlist.v ```
+
+![image](https://github.com/shreyakotagal/pes_asic_class/assets/117657204/12cf0b32-eb8a-4514-8d74-c35103def5e8)
+
+</details>
